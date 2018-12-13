@@ -23,7 +23,7 @@ class BatchManager:
         for i in range(sup):
             sup_data = random.choice(self.data)
             self.data.append(sup_data)
-        print "-"*50
+        print("-"*50)
         index = 0
         while True:
             if index >= len(self.data):

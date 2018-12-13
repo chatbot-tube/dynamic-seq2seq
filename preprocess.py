@@ -2,7 +2,7 @@
 import jieba
 import re
 import os
-import cPickle
+import pickle
 
 class Preprocess():
     __PAD__ = 0
@@ -44,7 +44,7 @@ class Preprocess():
         }
         
         with open(os.path.join(self.save_dir, "map.pkl"),"wb") as f:
-            cPickle.dump(self.data_map, f)
+            pickle.dump(self.data_map, f)
 
     def to_vec(self, dtype, sentences):
         if dtype == "Q":
